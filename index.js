@@ -6,7 +6,6 @@ const connectDB = require('./config/db');
 require('dotenv').config();
 
 
-
 connectDB();
 
 const index= express();
@@ -26,3 +25,4 @@ index.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 index.listen(PORT, () => console.log('Server running on port ${PORT}'))
+module.exports = index;
